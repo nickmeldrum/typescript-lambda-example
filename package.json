@@ -1,0 +1,84 @@
+{
+  "name": "@advice/portfolio-recommendation",
+  "version": "1.0.0",
+  "description": "Service to provide a customer with a model portfolio recommendation",
+  "scripts": {
+    "lint": "eslint src gdw-cli --fix",
+    "test": "yarn lint && jest --coverage",
+    "test-changed": "lint-staged && jest -o",
+    "watch": "jest --watch --notify",
+    "clean": "rm -rf target",
+    "package": "mkdir -p target && zip target/package.zip src/**/*"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "jest": {
+    "collectCoverageFrom": [
+      "./src/**/*.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "useTabs": false,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all",
+    "parser": "babel",
+    "printWidth": 120
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test-changed"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.3",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.3"
+  }
+}
