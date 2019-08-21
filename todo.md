@@ -15,3 +15,9 @@ references:
 
  * https://dev.to/robertcoopercode/using-eslint-and-prettier-in-a-typescript-project-53jb
  * https://javascriptplayground.com/typescript-eslint/
+
+
+followed:
+
+to setup typescript parsing with eslint and airbnb:
+https://medium.com/@myylow/how-to-keep-the-airbnb-eslint-config-when-moving-to-typescript-1abb26adb5c6
