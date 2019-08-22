@@ -1,6 +1,4 @@
-import { Handler, APIGatewayEvent } from 'aws-lambda'; // eslint-disable-line import/no-unresolved
-
-const handler: Handler = async (event: APIGatewayEvent) => {
+const handler: AWSLambda.Handler = async (event: AWSLambda.APIGatewayEvent) => {
     const body = { message: `Hello world! You used: ${event.httpMethod}.` };
     return {
         statusCode: 200,

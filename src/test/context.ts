@@ -1,6 +1,4 @@
-import { Context } from 'aws-lambda'; // eslint-disable-line import/no-unresolved
-
-const context: Context = {
+const context: AWSLambda.Context = {
     callbackWaitsForEmptyEventLoop: true,
     functionName: '',
     functionVersion: '',
