@@ -1,7 +1,7 @@
-import { Handler, APIGatewayEvent } from 'aws-lambda';
+import { Handler, APIGatewayEvent } from 'aws-lambda'; // eslint-disable-line import/no-unresolved
 
 const handler: Handler = async (event: APIGatewayEvent) => {
-    const body = { message: `hello world ${event.httpMethod}` };
+    const body = { message: `Hello world! You used: ${event.httpMethod}.` };
     return {
         statusCode: 200,
         body: JSON.stringify(body),
@@ -9,4 +9,4 @@ const handler: Handler = async (event: APIGatewayEvent) => {
     };
 };
 
-export { handler }; // eslint-disable-line import/prefer-default-export
+export { handler };

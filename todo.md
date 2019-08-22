@@ -21,3 +21,6 @@ followed:
 
 to setup typescript parsing with eslint and airbnb:
 https://medium.com/@myylow/how-to-keep-the-airbnb-eslint-config-when-moving-to-typescript-1abb26adb5c6
+
+
+https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript
