@@ -13,9 +13,15 @@
   "license": "UNLICENSED",
   "private": true,
   "jest": {
-    "roots": [ "./src" ],
-    "transform": { "^.+\\.ts$": "ts-jest" },
-    "collectCoverageFrom": [ "./src/**/*.ts" ],
+    "roots": [
+      "./src"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "./src/**/*.ts"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -32,11 +38,21 @@
       "sourceType": "module"
     },
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "eslint-comments",
+      "jest",
+      "promise",
+      "unicorn"
     ],
     "extends": [
-      "airbnb-base",
+      "airbnb-typescript/base",
       "plugin:@typescript-eslint/recommended",
+      "plugin:eslint-comments/recommended",
+      "plugin:jest/recommended",
+      "plugin:promise/recommended",
+      "plugin:unicorn/recommended",
+      "prettier",
+      "prettier/@typescript-eslint",
       "plugin:prettier/recommended"
     ],
     "env": {
@@ -53,17 +69,24 @@
     },
     "settings": {
       "import/extensions": [
-        ".js", ".ts"
+        ".js",
+        ".ts"
       ],
       "import/parsers": {
         "@typescript-eslint/parser": [
-          ".js", ".ts"
+          ".js",
+          ".ts"
         ]
       },
       "import/resolver": {
         "node": {
-          "extensions": [ ".js", ".ts" ],
-          "paths": [ "." ]
+          "extensions": [
+            ".js",
+            ".ts"
+          ],
+          "paths": [
+            "."
+          ]
         }
       }
     }
@@ -97,10 +120,14 @@
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-airbnb-typescript": "^4.0.1",
     "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.2",
     "eslint-plugin-prettier": "^3.1.0",
-    "husky": "^3.0.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-unicorn": "^10.0.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.2.3",
     "prettier": "^1.18.2",

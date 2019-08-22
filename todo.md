@@ -1,15 +1,14 @@
 todo:
 
- * jest compiles typescript?
  * packaging works?
  * test x-raytracing works
  * test husky works
  * Check through messaging - what else should it do?
  * have a logger/ error handler module/ convention
  * create strict tsconfig
-    * https://github.com/ctrlplusb/cra-monorepo/blob/master/tsconfig.json
     * https://codeburst.io/five-tips-i-wish-i-knew-when-i-started-with-typescript-c9e8609029db
 * check strict eslint rules - airbnb/ typescript?
+ * do we have strict tslint like rules or only the js airbnb ones?
 
 references:
 
@@ -18,6 +17,8 @@ references:
 
 
 followed:
+
+https://github.com/ctrlplusb/cra-monorepo/blob/master/tsconfig.json
 
 to setup typescript parsing with eslint and airbnb:
 https://medium.com/@myylow/how-to-keep-the-airbnb-eslint-config-when-moving-to-typescript-1abb26adb5c6
