@@ -1,5 +1,6 @@
 todo:
 
+ * why isn't our jest global setup muting our console logs?
  * packaging works?
  * test x-raytracing works
  * test husky works
@@ -25,3 +26,5 @@ https://medium.com/@myylow/how-to-keep-the-airbnb-eslint-config-when-moving-to-t
 
 
 https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript
+
+https://medium.com/@jeffkhull/a-typescript-monorepo-without-lerna-7805920c370f

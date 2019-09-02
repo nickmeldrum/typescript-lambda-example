@@ -7,15 +7,17 @@
     "test": "yarn lint && jest --coverage",
     "test-changed": "lint-staged && jest -o",
     "watch": "jest --watch --notify",
-    "prepare": "mkdir -p dist && rm -rf dist",
-    "package": "yarn clean && mkdir -p dist && zip dist/package.zip src/**/*"
+    "prepare": "rm -rf dist lib && mkdir -p dist lib",
+    "package": "yarn prepare && zip dist/package.zip src/**/*"
   },
   "license": "UNLICENSED",
   "private": true,
   "jest": {
+    "globalSetup": "./src/test/global-setup.ts",
     "roots": [
       "./src"
     ],
+    "moduleDirectories": ["node_modules", "./src/libraries"],
     "transform": {
       "^.+\\.ts$": "ts-jest"
     },
@@ -85,7 +87,8 @@
             ".ts"
           ],
           "paths": [
-            "."
+            ".",
+            "./src/libraries"
           ]
         }
       }
@@ -98,7 +101,7 @@
     "singleQuote": true,
     "arrowParens": "avoid",
     "trailingComma": "all",
-    "parser": "babel",
+    "parser": "typescript",
     "printWidth": 120
   },
   "husky": {

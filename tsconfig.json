@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src/libraries",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": false,
     "inlineSourceMap": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "noEmit": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "./lib",
@@ -20,6 +19,11 @@
   },
   "exclude": [
     "node_modules",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "./src/test"
+  ],
+  "include": [
+    "./src"
   ]
+
 }
