@@ -7,8 +7,8 @@
     "test": "yarn lint && jest --coverage",
     "test-changed": "lint-staged && jest -o",
     "watch": "jest --watch --notify",
-    "prepare": "rm -rf dist lib && mkdir -p dist lib",
-    "package": "yarn prepare && zip dist/package.zip src/**/*"
+    "clean": "rm -rf dist",
+    "package": "yarn clean && webpack"
   },
   "license": "UNLICENSED",
   "private": true,
@@ -17,7 +17,10 @@
     "roots": [
       "./src"
     ],
-    "moduleDirectories": ["node_modules", "./src/libraries"],
+    "moduleDirectories": [
+      "node_modules",
+      "./src/libraries"
+    ],
     "transform": {
       "^.+\\.ts$": "ts-jest"
     },
@@ -121,6 +124,7 @@
     "@types/node": "^12.7.2",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
+    "compression-webpack-plugin": "^3.0.0",
     "eslint": "^6.2.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-airbnb-typescript": "^4.0.1",
@@ -135,6 +139,10 @@
     "lint-staged": "^9.2.3",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "ts-loader": "^6.0.4",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }
