@@ -10,8 +10,6 @@
  * test husky works
  * Check through messaging - what else should it do?
  * check logs work
- * check strict tsconfig
-    * https://codeburst.io/five-tips-i-wish-i-knew-when-i-started-with-typescript-c9e8609029db
 
 ## references:
 
